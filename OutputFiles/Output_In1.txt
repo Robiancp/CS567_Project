@@ -1,0 +1,38 @@
+Course/Classroom Fit Program
+============================
+
+==========Upload start
+Nm: Bio Sciences, Num: 413, cap: 30
+Nm: Health & Learning Center, Num: 3101, cap: 65
+Nm: Health & Learning Center, Num: 3103, cap: 36
+Nm: CS 122, sz: 61
+Nm: CS 386, sz: 28
+Nm: CS 421, sz: 32
+==========Upload end
+
+Start Solution Search
+
+Recursion Level 0: Seeking a fit for Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+  Trying Course Name: CS 122, Course Size:  61 - Failed!
+  Trying Course Name: CS 386, Course Size:  28 - Success!
+    Course Name: CS 386, Course Size:  28 will fit in Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+
+ Recursion Level 1: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+   Trying Course Name: CS 122, Course Size:  61 - Success!
+     Course Name: CS 122, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+  Recursion Level 2: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3103, Room Capacity:  36
+    Trying Course Name: CS 122, Course Size:  61 - Failed!
+    Trying Course Name: CS 386, Course Size:  28 - Failed!
+    Trying Course Name: CS 421, Course Size:  32 - Success!
+      Course Name: CS 421, Course Size:  32 will fit in Building Name: Health & Learning Center, Room Number: 3103, Room Capacity:  36
+
+Fit Classroom Success: Solution Found.
+
+Classroom/Course Request Fit List
+=================================
+Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30 - Course Name: CS 386, Course Size:  28
+Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65 - Course Name: CS 122, Course Size:  61
+Building Name: Health & Learning Center, Room Number: 3103, Room Capacity:  36 - Course Name: CS 421, Course Size:  32
+
+End Course/Classroom Fit Program

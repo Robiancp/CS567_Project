@@ -1,0 +1,656 @@
+Course/Classroom Fit Program
+============================
+
+==========Upload start
+Nm: Bio Sciences, Num: 265, cap: 140
+Nm: Bio Sciences, Num: 413, cap: 30
+Nm: Health & Learning Center, Num: 3101, cap: 65
+Nm: Health & Learning Center, Num: 3113, cap: 70
+Nm: Adel Mathematics Center, Num: 148, cap: 40
+Nm: Eastburn Education, Num: 124, cap: 50
+Nm: Raul H. Castro SBS, Num: 111, cap: 98
+Nm: CS 110, sz: 39
+Nm: CS 112, sz: 69
+Nm: CS 136, sz: 61
+Nm: CS 200, sz: 44
+Nm: CS 248, sz: 138
+Nm: CS 301, sz: 95
+Nm: CS 386, sz: 28
+==========Upload end
+
+Start Solution Search
+
+Recursion Level 0: Seeking a fit for Building Name: Bio Sciences, Room Number: 265, Room Capacity: 140
+  Trying Course Name: CS 110, Course Size:  39 - Success!
+    Course Name: CS 110, Course Size:  39 will fit in Building Name: Bio Sciences, Room Number: 265, Room Capacity: 140
+
+ Recursion Level 1: Seeking a fit for Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+   Trying Course Name: CS 110, Course Size:  39 - Failed!
+   Trying Course Name: CS 112, Course Size:  69 - Failed!
+   Trying Course Name: CS 136, Course Size:  61 - Failed!
+   Trying Course Name: CS 200, Course Size:  44 - Failed!
+   Trying Course Name: CS 248, Course Size: 138 - Failed!
+   Trying Course Name: CS 301, Course Size:  95 - Failed!
+   Trying Course Name: CS 386, Course Size:  28 - Success!
+     Course Name: CS 386, Course Size:  28 will fit in Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+
+  Recursion Level 2: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+    Trying Course Name: CS 110, Course Size:  39 - Failed!
+    Trying Course Name: CS 112, Course Size:  69 - Failed!
+    Trying Course Name: CS 136, Course Size:  61 - Success!
+      Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Failed!
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 136, Course Size:  61 - Failed!
+     Trying Course Name: CS 200, Course Size:  44 - Success!
+       Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 200, Course Size:  44 - Success!
+      Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Failed!
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 136, Course Size:  61 - Success!
+       Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 200, Course Size:  44 - Failed!
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 248, Course Size: 138 - Failed!
+    Trying Course Name: CS 301, Course Size:  95 - Failed!
+    Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+ Course Name: CS 386, Course Size:  28 - recursion fell back to Recursion Level 1!
+
+
+Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 0!
+
+  Trying Course Name: CS 112, Course Size:  69 - Success!
+    Course Name: CS 112, Course Size:  69 will fit in Building Name: Bio Sciences, Room Number: 265, Room Capacity: 140
+
+ Recursion Level 1: Seeking a fit for Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+   Trying Course Name: CS 110, Course Size:  39 - Failed!
+   Trying Course Name: CS 112, Course Size:  69 - Failed!
+   Trying Course Name: CS 136, Course Size:  61 - Failed!
+   Trying Course Name: CS 200, Course Size:  44 - Failed!
+   Trying Course Name: CS 248, Course Size: 138 - Failed!
+   Trying Course Name: CS 301, Course Size:  95 - Failed!
+   Trying Course Name: CS 386, Course Size:  28 - Success!
+     Course Name: CS 386, Course Size:  28 will fit in Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+
+  Recursion Level 2: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+    Trying Course Name: CS 110, Course Size:  39 - Success!
+      Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Failed!
+     Trying Course Name: CS 112, Course Size:  69 - Failed!
+     Trying Course Name: CS 136, Course Size:  61 - Success!
+       Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 200, Course Size:  44 - Success!
+       Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 112, Course Size:  69 - Failed!
+    Trying Course Name: CS 136, Course Size:  61 - Success!
+      Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Success!
+       Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 112, Course Size:  69 - Failed!
+     Trying Course Name: CS 136, Course Size:  61 - Failed!
+     Trying Course Name: CS 200, Course Size:  44 - Success!
+       Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Success!
+        Course Name: CS 110, Course Size:  39 will fit in Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+
+     Recursion Level 5: Seeking a fit for Building Name: Eastburn Education, Room Number: 124, Room Capacity:  50
+       Trying Course Name: CS 110, Course Size:  39 - Failed!
+       Trying Course Name: CS 112, Course Size:  69 - Failed!
+       Trying Course Name: CS 136, Course Size:  61 - Failed!
+       Trying Course Name: CS 200, Course Size:  44 - Failed!
+       Trying Course Name: CS 248, Course Size: 138 - Failed!
+       Trying Course Name: CS 301, Course Size:  95 - Failed!
+       Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+    Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 4!
+
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 200, Course Size:  44 - Success!
+      Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Success!
+       Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 112, Course Size:  69 - Failed!
+     Trying Course Name: CS 136, Course Size:  61 - Success!
+       Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Success!
+        Course Name: CS 110, Course Size:  39 will fit in Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+
+     Recursion Level 5: Seeking a fit for Building Name: Eastburn Education, Room Number: 124, Room Capacity:  50
+       Trying Course Name: CS 110, Course Size:  39 - Failed!
+       Trying Course Name: CS 112, Course Size:  69 - Failed!
+       Trying Course Name: CS 136, Course Size:  61 - Failed!
+       Trying Course Name: CS 200, Course Size:  44 - Failed!
+       Trying Course Name: CS 248, Course Size: 138 - Failed!
+       Trying Course Name: CS 301, Course Size:  95 - Failed!
+       Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+    Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 4!
+
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 200, Course Size:  44 - Failed!
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 248, Course Size: 138 - Failed!
+    Trying Course Name: CS 301, Course Size:  95 - Failed!
+    Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+ Course Name: CS 386, Course Size:  28 - recursion fell back to Recursion Level 1!
+
+
+Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 0!
+
+  Trying Course Name: CS 136, Course Size:  61 - Success!
+    Course Name: CS 136, Course Size:  61 will fit in Building Name: Bio Sciences, Room Number: 265, Room Capacity: 140
+
+ Recursion Level 1: Seeking a fit for Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+   Trying Course Name: CS 110, Course Size:  39 - Failed!
+   Trying Course Name: CS 112, Course Size:  69 - Failed!
+   Trying Course Name: CS 136, Course Size:  61 - Failed!
+   Trying Course Name: CS 200, Course Size:  44 - Failed!
+   Trying Course Name: CS 248, Course Size: 138 - Failed!
+   Trying Course Name: CS 301, Course Size:  95 - Failed!
+   Trying Course Name: CS 386, Course Size:  28 - Success!
+     Course Name: CS 386, Course Size:  28 will fit in Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+
+  Recursion Level 2: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+    Trying Course Name: CS 110, Course Size:  39 - Success!
+      Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Failed!
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 136, Course Size:  61 - Failed!
+     Trying Course Name: CS 200, Course Size:  44 - Success!
+       Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 112, Course Size:  69 - Failed!
+    Trying Course Name: CS 136, Course Size:  61 - Failed!
+    Trying Course Name: CS 200, Course Size:  44 - Success!
+      Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Success!
+       Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Success!
+        Course Name: CS 110, Course Size:  39 will fit in Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+
+     Recursion Level 5: Seeking a fit for Building Name: Eastburn Education, Room Number: 124, Room Capacity:  50
+       Trying Course Name: CS 110, Course Size:  39 - Failed!
+       Trying Course Name: CS 112, Course Size:  69 - Failed!
+       Trying Course Name: CS 136, Course Size:  61 - Failed!
+       Trying Course Name: CS 200, Course Size:  44 - Failed!
+       Trying Course Name: CS 248, Course Size: 138 - Failed!
+       Trying Course Name: CS 301, Course Size:  95 - Failed!
+       Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+    Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 4!
+
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 136, Course Size:  61 - Failed!
+     Trying Course Name: CS 200, Course Size:  44 - Failed!
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 248, Course Size: 138 - Failed!
+    Trying Course Name: CS 301, Course Size:  95 - Failed!
+    Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+ Course Name: CS 386, Course Size:  28 - recursion fell back to Recursion Level 1!
+
+
+Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 0!
+
+  Trying Course Name: CS 200, Course Size:  44 - Success!
+    Course Name: CS 200, Course Size:  44 will fit in Building Name: Bio Sciences, Room Number: 265, Room Capacity: 140
+
+ Recursion Level 1: Seeking a fit for Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+   Trying Course Name: CS 110, Course Size:  39 - Failed!
+   Trying Course Name: CS 112, Course Size:  69 - Failed!
+   Trying Course Name: CS 136, Course Size:  61 - Failed!
+   Trying Course Name: CS 200, Course Size:  44 - Failed!
+   Trying Course Name: CS 248, Course Size: 138 - Failed!
+   Trying Course Name: CS 301, Course Size:  95 - Failed!
+   Trying Course Name: CS 386, Course Size:  28 - Success!
+     Course Name: CS 386, Course Size:  28 will fit in Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+
+  Recursion Level 2: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+    Trying Course Name: CS 110, Course Size:  39 - Success!
+      Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Failed!
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 136, Course Size:  61 - Success!
+       Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 200, Course Size:  44 - Failed!
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 112, Course Size:  69 - Failed!
+    Trying Course Name: CS 136, Course Size:  61 - Success!
+      Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Success!
+       Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Success!
+        Course Name: CS 110, Course Size:  39 will fit in Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+
+     Recursion Level 5: Seeking a fit for Building Name: Eastburn Education, Room Number: 124, Room Capacity:  50
+       Trying Course Name: CS 110, Course Size:  39 - Failed!
+       Trying Course Name: CS 112, Course Size:  69 - Failed!
+       Trying Course Name: CS 136, Course Size:  61 - Failed!
+       Trying Course Name: CS 200, Course Size:  44 - Failed!
+       Trying Course Name: CS 248, Course Size: 138 - Failed!
+       Trying Course Name: CS 301, Course Size:  95 - Failed!
+       Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+    Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 4!
+
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 136, Course Size:  61 - Failed!
+     Trying Course Name: CS 200, Course Size:  44 - Failed!
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 200, Course Size:  44 - Failed!
+    Trying Course Name: CS 248, Course Size: 138 - Failed!
+    Trying Course Name: CS 301, Course Size:  95 - Failed!
+    Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+ Course Name: CS 386, Course Size:  28 - recursion fell back to Recursion Level 1!
+
+
+Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 0!
+
+  Trying Course Name: CS 248, Course Size: 138 - Success!
+    Course Name: CS 248, Course Size: 138 will fit in Building Name: Bio Sciences, Room Number: 265, Room Capacity: 140
+
+ Recursion Level 1: Seeking a fit for Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+   Trying Course Name: CS 110, Course Size:  39 - Failed!
+   Trying Course Name: CS 112, Course Size:  69 - Failed!
+   Trying Course Name: CS 136, Course Size:  61 - Failed!
+   Trying Course Name: CS 200, Course Size:  44 - Failed!
+   Trying Course Name: CS 248, Course Size: 138 - Failed!
+   Trying Course Name: CS 301, Course Size:  95 - Failed!
+   Trying Course Name: CS 386, Course Size:  28 - Success!
+     Course Name: CS 386, Course Size:  28 will fit in Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30
+
+  Recursion Level 2: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+    Trying Course Name: CS 110, Course Size:  39 - Success!
+      Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Failed!
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 112, Course Size:  69 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 136, Course Size:  61 - Success!
+       Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 136, Course Size:  61 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 200, Course Size:  44 - Success!
+       Course Name: CS 200, Course Size:  44 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 200, Course Size:  44 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 248, Course Size: 138 - Failed!
+     Trying Course Name: CS 301, Course Size:  95 - Failed!
+     Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+  Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 2!
+
+    Trying Course Name: CS 112, Course Size:  69 - Failed!
+    Trying Course Name: CS 136, Course Size:  61 - Success!
+      Course Name: CS 136, Course Size:  61 will fit in Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65
+
+   Recursion Level 3: Seeking a fit for Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+     Trying Course Name: CS 110, Course Size:  39 - Success!
+       Course Name: CS 110, Course Size:  39 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Failed!
+      Trying Course Name: CS 112, Course Size:  69 - Failed!
+      Trying Course Name: CS 136, Course Size:  61 - Failed!
+      Trying Course Name: CS 200, Course Size:  44 - Failed!
+      Trying Course Name: CS 248, Course Size: 138 - Failed!
+      Trying Course Name: CS 301, Course Size:  95 - Failed!
+      Trying Course Name: CS 386, Course Size:  28 - Failed!
+
+   Course Name: CS 110, Course Size:  39 - recursion fell back to Recursion Level 3!
+
+     Trying Course Name: CS 112, Course Size:  69 - Success!
+       Course Name: CS 112, Course Size:  69 will fit in Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70
+
+    Recursion Level 4: Seeking a fit for Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+      Trying Course Name: CS 110, Course Size:  39 - Success!
+        Course Name: CS 110, Course Size:  39 will fit in Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40
+
+     Recursion Level 5: Seeking a fit for Building Name: Eastburn Education, Room Number: 124, Room Capacity:  50
+       Trying Course Name: CS 110, Course Size:  39 - Failed!
+       Trying Course Name: CS 112, Course Size:  69 - Failed!
+       Trying Course Name: CS 136, Course Size:  61 - Failed!
+       Trying Course Name: CS 200, Course Size:  44 - Success!
+         Course Name: CS 200, Course Size:  44 will fit in Building Name: Eastburn Education, Room Number: 124, Room Capacity:  50
+
+      Recursion Level 6: Seeking a fit for Building Name: Raul H. Castro SBS, Room Number: 111, Room Capacity:  98
+        Trying Course Name: CS 110, Course Size:  39 - Failed!
+        Trying Course Name: CS 112, Course Size:  69 - Failed!
+        Trying Course Name: CS 136, Course Size:  61 - Failed!
+        Trying Course Name: CS 200, Course Size:  44 - Failed!
+        Trying Course Name: CS 248, Course Size: 138 - Failed!
+        Trying Course Name: CS 301, Course Size:  95 - Success!
+          Course Name: CS 301, Course Size:  95 will fit in Building Name: Raul H. Castro SBS, Room Number: 111, Room Capacity:  98
+
+Fit Classroom Success: Solution Found.
+
+Classroom/Course Request Fit List
+=================================
+Building Name: Bio Sciences, Room Number: 265, Room Capacity: 140 - Course Name: CS 248, Course Size: 138
+Building Name: Bio Sciences, Room Number: 413, Room Capacity:  30 - Course Name: CS 386, Course Size:  28
+Building Name: Health & Learning Center, Room Number: 3101, Room Capacity:  65 - Course Name: CS 136, Course Size:  61
+Building Name: Health & Learning Center, Room Number: 3113, Room Capacity:  70 - Course Name: CS 112, Course Size:  69
+Building Name: Adel Mathematics Center, Room Number: 148, Room Capacity:  40 - Course Name: CS 110, Course Size:  39
+Building Name: Eastburn Education, Room Number: 124, Room Capacity:  50 - Course Name: CS 200, Course Size:  44
+Building Name: Raul H. Castro SBS, Room Number: 111, Room Capacity:  98 - Course Name: CS 301, Course Size:  95
+
+End Course/Classroom Fit Program
