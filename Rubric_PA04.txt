@@ -1,0 +1,24 @@
+Rubric - PA04
+
+Program Operations:  /4
+======================
+Program builds correctly, no errors or warnings: /2
+Program runs correctly:  /2
+
+Recursive Backtracking Function: /72
+=============================================
+
+- 18 parts of the function @ 4 points each
+
+- not shown for this assignment since it would display the process
+
+All other specifications followed:  /4
+=====================================
+- correct file upload
+- correct method names, variable names, etc.
+- appropriate use of constant value
+
+General Usage Rubric reductions
+===============================
+see GUR document
+
