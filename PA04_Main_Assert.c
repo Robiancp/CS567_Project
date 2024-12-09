@@ -41,10 +41,14 @@ int main( int argc, char **argv )
     printf( "============================\n" );
 
     rooms = createRoomArray( MAX_NUM_ROOMS );
+    //@BEGIN_TEST_CODE
     assert( rooms != NULL );
+    //@END_TEST_CODE
 
     courses = createCourseArray( MAX_NUM_COURSES );
+    //@BEGIN_TEST_CODE
     assert( courses != NULL);
+    //@END_TEST_CODE
  
     if( uploadData( inputFilename, courses, rooms ) ) 
        {
@@ -73,10 +77,15 @@ int main( int argc, char **argv )
 
        // clear data 
        rooms = clearRoomArray( rooms );
+
+       //@BEGIN_TEST_CODE
        assert( rooms == NULL );
+       //@END_TEST_CODE
 
        courses = clearCourseArray( courses );
+       //@BEGIN_TEST_CODE
        assert( courses == NULL );
+       //@END_TEST_CODE
 
        // show program end
        printf( "\nEnd Course/Classroom Fit Program\n" );
@@ -117,6 +126,7 @@ bool fitClassRooms( CourseArrayType *courses,
        // functions: deepCopyRoom
     deepCopyRoom( &localRoom, rooms->array[roomLevel] );
 
+    //@BEGIN_TEST_CODE
     assert( rooms != NULL );
     assert( courses != NULL );
 
@@ -126,6 +136,7 @@ bool fitClassRooms( CourseArrayType *courses,
     assert( localRoom.roomCapacity == rooms->array[roomLevel].roomCapacity );
     assert( localRoom.associatedIndex == rooms->array[roomLevel].associatedIndex );
     assert( strcmp(localRoom.buildingName, rooms->array[roomLevel].buildingName) == 0 );
+    //@END_TEST_CODE
     
     // check if verbose is true and display recursion message if so
     if( verboseFlag )
@@ -149,9 +160,11 @@ bool fitClassRooms( CourseArrayType *courses,
            // functions: deepCopyCourse
         deepCopyCourse( &localCourse, courses->array[ courseIndex ] );
         
+        //@BEGIN_TEST_CODE
         assert( localCourse.size == courses->array[courseIndex].size );
         assert( localCourse.available == courses->array[courseIndex].available );
         assert( strcmp( localCourse.courseName, courses->array[courseIndex].courseName ) == 0 );
+        //@END_TEST_CODE
 
         // compare the current course capacity to 
         // room capacity only if the course is available
@@ -159,8 +172,10 @@ bool fitClassRooms( CourseArrayType *courses,
                localCourse.size <= localRoom.roomCapacity )
            {
 
+            //@BEGIN_TEST_CODE
             assert( localCourse.available == true );
             assert( localCourse.size <= localRoom.roomCapacity );
+            //@END_TEST_CODE
 
             // set current course number the current room's associted index
             rooms->array[roomLevel].associatedIndex = courseIndex;
@@ -172,6 +187,10 @@ bool fitClassRooms( CourseArrayType *courses,
             // and course fit summary if true
             if( verboseFlag )
                {
+
+                //@BEGIN_TEST_CODE
+                assert( verboseFlag == true );
+                //@END_TEST_CODE
 
                 // print that the current test was a success
                    // functions: printSpaces, printf, setCourseDataString
@@ -196,6 +215,10 @@ bool fitClassRooms( CourseArrayType *courses,
             // check if a successful fit was found at the max room level
             if( roomLevel == rooms->size - 1 )
                {
+
+                //@BEGIN_TEST_CODE
+                assert( roomLevel == rooms->size - 1 );
+                //@END_TEST_CODE
 
                 // return true to cause a chain 
                 // reaction and finish the program
@@ -223,6 +246,10 @@ bool fitClassRooms( CourseArrayType *courses,
                 if( verboseFlag )
                    {
 
+                    //@BEGIN_TEST_CODE
+                    assert( verboseFlag == true );
+                    //@END_TEST_CODE
+
                     // print recursion fallback message
                        // functions: printf, printSpaces, setCourseDataString
                     printf("\n");
@@ -246,6 +273,10 @@ bool fitClassRooms( CourseArrayType *courses,
             // if verboseFlag true, print that the current test failed
             if( verboseFlag )
                {
+
+                //@BEGIN_TEST_CODE
+                assert( verboseFlag == true );
+                //@END_TEST_CODE
 
                 // print that the current test failed
                    // functions: printSpaces, printf, setCourseDataString
@@ -291,6 +322,11 @@ bool uploadData( const char *fileName,
        {
         if( verboseFlag )
            {
+
+            //@BEGIN_TEST_CODE
+            assert( verboseFlag == true );
+            //@END_TEST_CODE
+
             printf( "\n==========Upload start\n" );
            }
 
@@ -304,6 +340,11 @@ bool uploadData( const char *fileName,
         while( strcmp( tempStr, "End Room Data" ) != 0 
                                      && roomData->size < roomData->capacity )
            {
+
+            //@BEGIN_TEST_CODE
+            assert( strcmp(tempStr, "End Room Data" ) != 0 );
+            //@END_TEST_CODE
+
             tempRoomNum = readIntegerFromFile();
 
             readCharacterFromFile();
@@ -312,6 +353,11 @@ bool uploadData( const char *fileName,
 
             if( verboseFlag )
                {
+
+                //@BEGIN_TEST_CODE
+                assert( verboseFlag == true );
+                //@END_TEST_CODE
+
                 printf( "Nm: %s, Num: %d, cap: %d\n", 
                                        tempStr, tempRoomNum, tempRoomCapacity );
                }
@@ -340,6 +386,11 @@ bool uploadData( const char *fileName,
 
             if( verboseFlag )
                {
+
+                //@BEGIN_TEST_CODE
+                assert( verboseFlag == true );
+                //@END_TEST_CODE
+
                 printf( "Nm: %s, sz: %d\n", tempStr, tempClassSize );
                }
 
@@ -352,6 +403,11 @@ bool uploadData( const char *fileName,
 
         if( verboseFlag )
            {
+
+            //@BEGIN_TEST_CODE
+            assert( verboseFlag == true );
+            //@END_TEST_CODE
+
             printf( "==========Upload end\n\n" );
            }
 
